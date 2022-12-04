@@ -9,6 +9,7 @@ const int Max = 999999999;//定义最大值
 string files_name[10] = { "apple.txt","cherry.txt","grape.txt","mangosteen.txt","orange.txt","peach.txt","pear.txt","pineapple.txt","pomelo.txt","watermelon.txt" };
 //文档id -> 文档名字
 map<string, int> mymap;
+//通过string 找到词条对应的code存放位置;
 
 struct HuffmanNode	// 哈夫曼树结点的定义
 {
@@ -133,7 +134,7 @@ bool read_Huffman_weight(vector<HuffmanNode>& leafs)
 	string buf1;
 	int buf2;
 	int i = 0;
-	while (infile >> buf1, infile >> buf2)
+	while (infile >> buf1, infile >> buf2)//读取文件 buf1是词条，buf2是相应的权重
 	{
 		HuffmanNode temp;
 		temp.data = buf1;
