@@ -165,11 +165,11 @@ bool zip(vector<vector<int>> code, vector<vector<int>>&soures)//code用于查询
 		vector<int>temp;
 		while (infile>>buf)
 		{
-			int index = mymap[buf];
+			int index = mymap[buf];//找到词条字典中对应编码的位置
 			int size = code[index].size();
 			for (int j = 0; j < size; j++)
 			{
-				temp.push_back(code[index][j]);
+				temp.push_back(code[index][j]);//将index编号的文章压缩进soures中去
 			}
 		}
 		soures.push_back(temp);	
